@@ -29,6 +29,7 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
+<<<<<<< HEAD
     API_ID = os.environ.get("API_ID", "23081466")
     API_HASH = os.environ.get("API_HASH", "dbc665db1489f9d3cfd8de4a52f1ad4b")
     BOT_TOKEN = os.environ.get(
@@ -47,6 +48,22 @@ class Config(object):
         admin) else admin for admin in os.environ.get('ADMIN', '1764208280').split()]
     FORCE_SUB = os.environ.get("FORCE_SUB", "filmyspotupdate")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002057652403"))
+=======
+    API_ID    = os.environ.get("API_ID", "23081466")
+    API_HASH  = os.environ.get("API_HASH", "dbc665db1489f9d3cfd8de4a52f1ad4b")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6311317123:AAHv39U5QAJqgMuyZqfqFyH86AgqQm8sRT0") 
+   
+    # database config
+    DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://DHANUSH:DHANUSH@cluster0.2dppahj.mongodb.net/?retryWrites=true&w=majority")
+ 
+    # other configs
+    BOT_UPTIME  = time.time()
+    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/89798cd67ff38a3d854dc.jpg")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1764208280').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "filmyspotupdate") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1002057652403"))
+>>>>>>> 94fbff820a3bcc6a1fed5309c143a780a14f4dd1
 
     # wes response configuration
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
