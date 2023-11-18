@@ -63,7 +63,6 @@ class Config(object):
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1764208280').split()]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "filmyspotupdate") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","-1002087522732"))
->>>>>>> 94fbff820a3bcc6a1fed5309c143a780a14f4dd1
 
     # wes response configuration
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
